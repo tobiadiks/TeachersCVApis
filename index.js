@@ -5,13 +5,13 @@ var mongoose = require("mongoose");
 app = express();
 
 const uri = process.env.DB_CONNECT;
-const um = "mongodb://127.0.0.1:27017/local";
+//const um = "mongodb://127.0.0.1:27017/local";
 const port = process.env.PORT || 9000;
 
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(um, {
+mongoose.connect(uri, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useFindAndModify: false,
