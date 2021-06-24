@@ -21,7 +21,7 @@ router.route("/create").post((req, res) => {
     isEmployed: req.body.isEmployed,
   };
   Teacher.create(teacher_detail)
-    .then((res) => res.json((data) => res.json({response:"Teacher created Successfully",data:data})))
+    .then((data) => res.json({response:"Teacher created Successfully",data:data}))
     .catch((err) =>
       res
         .status(400)
