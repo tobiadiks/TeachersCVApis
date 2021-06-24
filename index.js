@@ -4,9 +4,9 @@ var mongoose = require("mongoose");
 
 app = express();
 
-const uri = process.env.DB_CONNECT;
+const uri = "mongodb+srv://tobi:12345@cluster0.w2gjd.mongodb.net/teacherDatabase?retryWrites=true&w=majority";
 //const um = "mongodb://127.0.0.1:27017/local";
-const port = process.env.PORT || 9000;
+const port = 3000 || 9000;
 
 app.use(cors());
 app.use(express.json());
